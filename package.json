@@ -6,9 +6,9 @@
   },
   "private": true,
   "scripts": {
-    "dev": "npm run watch-icons & next dev",
+    "dev": "node api.js && npm run watch-icons & next dev",
     "build": "npm run build-icons && next build",
-    "start": "next start",
+    "start": "node api.js && next start",
     "lint": "next lint && tsc --noEmit",
     "------  Icons --------------------------------------------------------------------------": "",
     "watch-icons": "node bin/icons --watch",
