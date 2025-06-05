@@ -6,13 +6,13 @@
   },
   "private": true,
   "scripts": {
-    "dev": "npm run watch-icons & next dev",
-    "build": "npm run build-icons && next build",
-    "start": "next start",
+    "dev": "node init && npm run watch-icons & next dev",
+    "build": "node init && npm run build-icons && next build",
+    "start": "node init && next start",
     "lint": "next lint && tsc --noEmit",
     "------  Icons --------------------------------------------------------------------------": "",
     "watch-icons": "node bin/icons --watch",
-    "build-icons": "node bin/icons"
+    "build-icons": "node init && node bin/icons"
   },
   "dependencies": {
     "@apollo/client": "^3.11.1",
